@@ -1,5 +1,9 @@
 body {
     margin: 0;
+    height: 100vh;
+
+    background: url("resources/img/pexels-shvetsa-5029853.jpg") no-repeat center center;
+    background-size: cover;
 }
 
 .container {
@@ -59,12 +63,15 @@ button:hover {
 }
 
 .campo-login {
-    width: 90%;          
-    max-width: 500px;    
-    padding: 30px;       
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    width: 90%;
+    max-width: 400px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 label {

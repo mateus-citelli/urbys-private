@@ -56,7 +56,7 @@ label {
 
 .titulo {
     font-family: "Montserrat";
-    color: var(--dark-green);
+    color: var(--leaf-green);
     margin-bottom: 25px;
     font-size: 1.8rem;
 }
@@ -116,6 +116,11 @@ input:focus {
 
 body {
     background-color: var(--dark-green) !important;
+    background-image: url("../register/resources/pexels-shvetsa-5029853.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: flex-start; 
     align-items: center;

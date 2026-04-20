@@ -1,75 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URBYS CADASTRO</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>URBYS — Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="register.css">
 </head>
-
 <body>
-    <div class="Informacoes-cadastro">
-        <form class="cadastro-card">
-            <h2 class="titulo">Cadastro de usuário</h2>
 
+<!-- Banner idêntico ao do formulário -->
+<div class="banner">
+    <div class="logo">URBYS</div>
+    <div class="center">
+        <h1>SUSTENTABILIDADE PARA <span>TODOS</span></h1>
+    </div>
+</div>
+
+<div class="page-wrapper">
+    <div class="register-card">
+        <h1 class="card-title">Cadastro de Usuário</h1>
+        <p class="card-subtitle">Crie sua conta para reportar problemas na sua cidade.</p>
+
+        <form id="registerForm" novalidate>
+
+            <!-- Seção: Dados Pessoais -->
             <fieldset>
-                <div class="row">
-                    <div class="field">
-                        <label for="cpf">CPF</label>
-                        <input id="cpf" type="text" placeholder="Digite seu CPF" required>
+                <legend>Dados Pessoais</legend>
+
+                <div class="field">
+                    <label for="cpf">CPF</label>
+                    <div class="input-wrap">
+                        <span class="icon">🪪</span>
+                        <input id="cpf" type="text" placeholder="000.000.000-00" maxlength="14" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="field">
                         <label for="email">E-mail</label>
-                        <input id="email" type="email" placeholder="Digite seu e-mail" required>
+                        <div class="input-wrap">
+                            <span class="icon">✉️</span>
+                            <input id="email" type="email" placeholder="seu@email.com" required>
+                        </div>
                     </div>
-
                     <div class="field">
                         <label for="phone">Telefone</label>
-                        <input id="phone" type="tel" placeholder="Digite seu telefone" required>
+                        <div class="input-wrap">
+                            <span class="icon">📱</span>
+                            <input id="phone" type="tel" placeholder="(99) 99999-9999" maxlength="15" required>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="field">
-                        <label for="endereco">Endereço</label>
-                        <input id="endereco" type="text" placeholder="Digite seu endereço" required>
+                <div class="field">
+                    <label for="endereco">Endereço</label>
+                    <div class="input-wrap">
+                        <span class="icon">📍</span>
+                        <input id="endereco" type="text" placeholder="Rua, número, bairro, cidade" required>
                     </div>
                 </div>
             </fieldset>
 
+            <!-- Seção: Segurança -->
             <fieldset>
+                <legend>Segurança</legend>
+
                 <div class="row">
                     <div class="field">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" placeholder="Digite sua senha" required>
+                        <div class="input-wrap">
+                            <span class="icon">🔒</span>
+                            <input id="password" type="password" placeholder="Digite sua senha" required>
+                        </div>
+                        <div class="strength-bar"><span id="strengthBar"></span></div>
                     </div>
-
                     <div class="field">
-                        <label for="confirm-password">Confirmar senha</label>
-                        <input id="confirm-password" type="password" placeholder="Confirme sua senha" required>
+                        <label for="confirm-password">Confirmar Senha</label>
+                        <div class="input-wrap">
+                            <span class="icon">🔒</span>
+                            <input id="confirm-password" type="password" placeholder="Confirme sua senha" required>
+                        </div>
                     </div>
                 </div>
-
-                <button type="submit" id="confirmBt">Cadastrar</button>
-
             </fieldset>
 
-            <div class="login-link">
-                <a href="../login/login.html">já tem uma conta? Entrar</a> <!-- Futuro link para a página de login -->
-            </div>
+            <button type="submit" class="btn-submit">Cadastrar</button>
         </form>
+
+        <div class="login-link">
+            <p>Já tem uma conta? <a href="../login/login.html">Entrar</a></p>
+        </div>
     </div>
-
-
-    <script type="module" src="../scripts/pages/register.js"></script> <!-- Futuro script da página -->
+</div>
+<script src="register.js"></script>
 </body>
-
 </html>

@@ -41,3 +41,16 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
     }
     alert('Cadastro realizado com sucesso!');
 });
+
+function togglePassword(id) {
+    const input = document.getElementById(id);
+    const icon = input.nextElementSibling;
+
+    if (input.type === 'password') {
+        input.type = 'text';
+        icon.textContent = '🙈';
+    } else {
+        input.type = 'password';
+        icon.textContent = '👁️';
+    }
+};

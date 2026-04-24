@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>URBYS - Página de Login</title>
-        <meta name="description" content="">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="login.css">
-    </head>
-    <body>
-    <div class="container">
-        <div class="login-card">
-        <fieldset class="campo-login">
-            <form action="fazerlogin">
-                <label for="cpf" class="label-cpf">CPF</label>
-                <br>
-                <input type="number" id="campocpf" name="cpf" inputmode="numeric" autocomplete="on" required>
-                <br>
-                <label for="password" class="label-senha">SENHA</label>
-                <br>
-                <input type="password" id="password" name="password" autocomplete="on" required>
-
-                <button type="submit">Enviar</button>
-
-            </form>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBYS — Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+ 
+<div class="banner">
+    <div class="logo">URBYS</div>
+    <div class="center">
+        <h1>SUSTENTABILIDADE PARA <span>TODOS</span></h1>
+    </div>
+</div>
+ 
+<div class="page-wrapper">
+    <div class="login-card">
+        <h1 class="card-title">Bem-vindo de volta!</h1>
+        <p class="card-subtitle">Entre com seu CPF e senha para continuar.</p>
+ 
+        <form id="loginForm" novalidate>
+ 
+            <fieldset>
+                <legend>Acesso</legend>
+ 
+                <div class="field">
+                    <label for="cpf">CPF</label>
+                    <div class="input-wrap">
+                        <span class="icon">🪪</span>
+                        <input id="cpf" type="text" placeholder="000.000.000-00" maxlength="14" required>
+                    </div>
+                </div>
+ 
+                <div class="field">
+                    <label for="password">Senha</label>
+                    <div class="input-wrap">
+                        <span class="icon">🔒</span>
+                        <input id="password" type="password" placeholder="Digite sua senha" required>
+                        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                    </div>
+                </div>
+ 
+                <div class="forgot-link">
+                    <a href="#">Esqueceu sua senha?</a>
+                </div>
             </fieldset>
+ 
+            <button type="submit" class="btn-submit">Entrar</button>
+        </form>
+ 
+        <div class="register-link">
+            <p>Não tem uma conta? <a href="../register/register.html">Cadastre-se</a></p>
         </div>
-        </div>
-        <div class="footer">
-        <footer>
-
-        </footer>
-        </div>
-        </div>
-        <script src="" async defer></script>
-    </body>
+    </div>
+</div>
+ 
+<script src="login.js"></script>
+</body>
 </html>

@@ -46,7 +46,11 @@ h1 {
 
 /* ── Body ── */
 body {
-    background: radial-gradient(circle at center, #52B788 0%, #2D6A4F 35%, #1B4332 65%, #081C15 100%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("resources/pexels-shvetsa-5029853.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     color: #D8F3DC;
     display: flex;
@@ -72,6 +76,7 @@ body {
     box-shadow: 0 0 30px #40916c, inset 0 0 20px rgba(0,0,0,0.6);
     backdrop-filter: blur(6px);
     animation: fadeUp 0.5s ease both;
+    overflow: hidden;
 }
 
 @keyframes fadeUp {
@@ -101,6 +106,7 @@ fieldset {
     padding: 20px 24px 24px;
     margin-bottom: 20px;
     background: rgba(8,28,21,0.4);
+    min-width: 0;
 }
 
 legend {
@@ -114,6 +120,7 @@ legend {
 .row {
     display: flex;
     gap: 14px;
+    min-width: 0;
 }
 
 /* ── Field ── */
@@ -122,6 +129,7 @@ legend {
     flex-direction: column;
     flex: 1;
     margin-bottom: 14px;
+    min-width: 0;
 }
 
 .field:last-child { margin-bottom: 0; }
@@ -142,6 +150,7 @@ legend {
     border-radius: 10px;
     padding: 0 12px;
     transition: border-color 0.25s, box-shadow 0.25s;
+    min-width: 0;
 }
 
 .input-wrap:focus-within {
@@ -164,7 +173,8 @@ legend {
     color: #D8F3DC;
     font-size: 0.88rem;
     padding: 12px 0;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
 }
 
 .input-wrap input::placeholder {
@@ -230,4 +240,10 @@ legend {
     .register-card { padding: 28px 20px 32px; }
     .row { flex-direction: column; gap: 0; }
     .card-title { font-size: 1.4rem; }
+}
+
+.toggle-password {
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
 }

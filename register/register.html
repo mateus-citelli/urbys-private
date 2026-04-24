@@ -72,6 +72,7 @@
                         <div class="input-wrap">
                             <span class="icon">🔒</span>
                             <input id="password" type="password" placeholder="Digite sua senha" required>
+                            <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
                         </div>
                         <div class="strength-bar"><span id="strengthBar"></span></div>
                     </div>
@@ -79,7 +80,8 @@
                         <label for="confirm-password">Confirmar Senha</label>
                         <div class="input-wrap">
                             <span class="icon">🔒</span>
-                            <input id="confirm-password" type="password" placeholder="Confirme sua senha" required>
+                            <input id="confirm-password" type="password" placeholder="Confirme a senha" required>
+                            <span class="toggle-password" onclick="togglePassword('confirm-password')">👁️</span>
                         </div>
                     </div>
                 </div>

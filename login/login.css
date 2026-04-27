@@ -15,6 +15,7 @@
     padding: 0 40px;
     background: linear-gradient(90deg, #74C69D, #52B788, #40916C, #2D6A4F, #1B4332, #081C15);
     position: relative;
+    cursor: pointer;
 }
 .banner .logo {
     font-weight: bold;

@@ -23,6 +23,9 @@
     position: absolute;
     left: 40px;
 }
+.logo {
+    cursor: pointer;
+}
 .banner .center {
     text-align: center;
 }
